@@ -1,15 +1,16 @@
-"use strict";
+"use strict"
+let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-// const answers = [];
+let lastFilms = prompt('Один из последних просмотренных фильмов?', '');
+let estimationLastFilms = +prompt('На сколько оцените его?', '');
 
-// // answers[0] = prompt('Your name?', '');
-// // answers[1] = prompt('Your age?', '');
-// // answers[2] = prompt('Your country?', '');
+personalMovieDB.movies[lastFilms] = estimationLastFilms;
 
-// // document.write(answers);
-
-// console.log(typeof(answers));
-
-console.log(2 + 2 * 2 !== '6');
-
-console.log(2 + 2 * 2 !== '9');
+console.log(personalMovieDB);
